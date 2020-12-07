@@ -15,7 +15,7 @@ function getLabyrintheData($number, $exercise)
 }
 
 
-function updateLabyrintheData($labyrinthe)
+function updateLabyrintheData($labyrinthe,$typeOfLabyrinthe)
 {
     // stocker les datas reçu dans une variable
     $datas = $labyrinthe;
@@ -24,10 +24,11 @@ function updateLabyrintheData($labyrinthe)
     // création du nouveau tableau de data modifié
     foreach ($datas as $index => $data) {
         $walls = $data->walls;
+        $case = $index;
         // stockage des classe pour chaque case
         $class =  createClass($walls);
         // stockage de la sortie pour chaque case
-        $choices = findchoicese($walls);
+        $choices = findchoices($walls,$index,$typeOfLabyrinthe);
 
 
         //Stockage des nouvelles données dans  le tableau
@@ -36,6 +37,7 @@ function updateLabyrintheData($labyrinthe)
             "position-y" => $data->posX,
             "choices" => $choices,
             "class"=>$class,
+            "case"=>$index,
         ];
     }
     return $newDatas;
@@ -43,20 +45,23 @@ function updateLabyrintheData($labyrinthe)
 
 
 // création d'un tableau des zones de sorties pour chaque case
-function findchoicese($walls){
+function findchoices($walls,$index,$typeOfLabyrinthe){
     $choices=[];
     if ($walls[0] == false) {
-
-        array_push($choices, 'le haut');
+        $goTo=$index - $typeOfLabyrinthe;
+        array_push($choices, ['le haut',0,-1,$goTo]);
     }
     if ($walls[1]==false) {
-        array_push($choices, 'la droite');
+        $goTo=$index + 1;
+        array_push($choices, ['la droite',+1,0,$goTo]);
     }
     if ($walls[2]==false) {
-        array_push($choices, 'le bas');
+        $goTo=$index + $typeOfLabyrinthe;
+        array_push($choices, ['le bas',0,+1,$goTo]);
     }
     if ($walls[3]==false) {
-        array_push($choices, 'la gauche');
+        $goTo=$index -1;
+        array_push($choices, ['la gauche',-1,0,$goTo]);
     }
     return $choices;
 }

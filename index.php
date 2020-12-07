@@ -11,8 +11,10 @@ include 'function.php';
     <link rel="stylesheet" type="text/css" href="/assets/styles.css" media="screen"/>
 </head>
 <body>
-<section>
+<section class="container d-flex flex-row justify-content-around">
     <div id="labyrinthe" >
+    </div>
+    <div id="theGAme" >
     </div>
 </section>
 
@@ -20,7 +22,7 @@ include 'function.php';
 $typeOfLabyrinthe = '3';
 $exerciseNumber ='0';
 $getLabyrintheData = getLabyrintheData($typeOfLabyrinthe, $exerciseNumber);
-$labyrinthe = updateLabyrintheData($getLabyrintheData);
+$labyrinthe = updateLabyrintheData($getLabyrintheData,$typeOfLabyrinthe);
 ?>
 <footer>
 

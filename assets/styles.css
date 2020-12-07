@@ -6,8 +6,8 @@ div{
     padding: 0;
 }
 #labyrinthe{
-    position: relative;
-}
+     position: relative;
+ }
 
 .square{
     margin: 0;
@@ -53,6 +53,13 @@ div{
     border-right : 5px solid red;
 }
 
+
+#theGAme{
+    position: relative;
+}
+.information{
+
+}
 
 
 
