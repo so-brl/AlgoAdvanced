@@ -1,0 +1,58 @@
+body{
+
+}
+div{
+    margin: 0;
+    padding: 0;
+}
+#labyrinthe{
+    position: relative;
+}
+
+.square{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.start{
+    position: absolute;
+    background-color: orange;
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+}
+.finish{
+    position: absolute;
+    background-color: green;
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+}
+.player{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    margin:23px 38px ;
+}
+
+.wall-top{
+    border-top : 5px solid red;
+}
+.wall-left{
+    border-left : 5px solid red;
+}
+.wall-bottom{
+    border-bottom : 5px solid red;
+}
+.wall-right{
+    border-right : 5px solid red;
+}
+
+
+
+
