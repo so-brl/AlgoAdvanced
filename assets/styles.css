@@ -1,12 +1,16 @@
 body{
-
+background-color:black;
 }
 div{
     margin: 0;
     padding: 0;
 }
+.plateau{
+    padding: 5vw;
+}
 #labyrinthe{
      position: relative;
+
  }
 
 .square{
@@ -21,44 +25,51 @@ div{
 
 .start{
     position: absolute;
-    background-color: orange;
+    background-color: #303E8C;
     height: 90px;
     width: 90px;
     margin: 5px;
 }
 .finish{
     position: absolute;
-    background-color: green;
+    background-color:#F24F13;
     height: 90px;
     width: 90px;
     margin: 5px;
 }
-.player{
+.playerStyle{
     position: absolute;
-    color: white;
     font-size: 30px;
     margin:23px 38px ;
 }
-
+.active{
+    color: white;
+}
 .wall-top{
-    border-top : 5px solid red;
+    border-top : 5px solid #4EA696;
 }
 .wall-left{
-    border-left : 5px solid red;
+    border-left : 5px solid #4EA696;
 }
 .wall-bottom{
-    border-bottom : 5px solid red;
+    border-bottom : 5px solid #4EA696;
 }
 .wall-right{
-    border-right : 5px solid red;
+    border-right : 5px solid #4EA696;
 }
 
 
 #theGAme{
-    position: relative;
+   color: #4EA696;
+    font-size: 14px;
 }
-.information{
 
+.visited{
+    color:#0E2226;
+    background-color: #0E2226;
+    height: 90px;
+    width: 90px;
+    margin: 5px;
 }
 
 
