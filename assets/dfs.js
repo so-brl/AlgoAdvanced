@@ -1,8 +1,7 @@
+/** --------------------- DECLARATION DES VARIABLES --------------------- */
 let maze = document.querySelector('.maze');
 let context = maze.getContext('2d');
-
 let mazeData = labyrinthe ;
-
 let size = 500;
 let totalCells =  mazeData['totalCells'];
 let rows = mazeData['totalRows'];
@@ -13,12 +12,17 @@ let cellDatas = mazeData['cellDatas'];
 let current;
 
 
+/** --------------------- LES CLASS --------------------- */
+
+/** Génération d'un labyrinthe composé d'un grille et de cellules */
 class Maze {
     constructor(size, rows, columns,totalCells) {
         this.size = size;
         this.rows = rows;
         this.totalCells = totalCells;
         this.columns = columns;
+        this.start = start;
+        this.finish =finish;
         this.grid = [];
 
 
@@ -27,7 +31,6 @@ class Maze {
     setup() {
        for (let r = 0; r < this.totalCells; r++) {
                let cell = new Cell(this.grid, this.size, cellDatas[r + 1]);
-               //console.log(cell);
                this.grid.push(cell);
        }
         current = this.grid[0][0];
@@ -43,16 +46,14 @@ class Maze {
         let grid =this.grid;
 
         for (let r = 0; r < this.totalCells; r++) {
-            console.log(grid[r]);
-            console.log('this.rows = '+this.rows);
-            console.log('this.columns = '+this.rows);
             grid[r].show(this.size,this.rows,this.columns);
-console.log('------------------');
+
         }
 
    }
 }
 
+/** Génération de cellules */
 class Cell {
     constructor( parentGrid, parentSize,cellData) {
         this.rowNumber = cellData['rowNumber'];
@@ -106,8 +107,6 @@ class Cell {
     show(size, rows, columns){
         let x = this.rowNumber;
         let y = this.colNumber;
-        console.log('x = '+ x);
-        console.log('y = '+ y);
         context.strokeStyle = "red";
         context.fillStyle ="black";
         context.lineWidth = 2 ;
@@ -117,11 +116,18 @@ class Cell {
         if (this.walls.bottomWall)this.drawBottomWall(x , y , size , columns , rows) ;
         if (this.walls.leftWall)this.drawLeftWall(x , y , size , columns , rows) ;
 
-
     }
 }
 
+/** --------------------- LES FONCTIONS --------------------- */
 
-let newMaze = new Maze(size, rows, columns,totalCells);
-newMaze.setup();
-newMaze.draw();
+/** Génération du labyrinthe */
+function initMaze(){
+    let newMaze = new Maze(size, rows, columns,totalCells);
+    newMaze.setup();
+    newMaze.draw();
+}
+
+/** --------------------- LA GENERATION --------------------- */
+/** Génération du labyrinthe */
+initMaze()
