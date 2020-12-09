@@ -75,30 +75,30 @@ class Cell {
 
     drawTopWall(x, y, size, columns, rows) {
         context.beginPath();
-        context.moveTo(x, y);
-        context.lineTo(x + size / columns, y);
+        context.moveTo(x*(size / columns), y*( size / rows));
+        context.lineTo(x*(size / columns) + size / columns, y*( size / rows));
         context.stroke();
 
     }
 
     drawRightWall(x, y, size, columns, rows) {
         context.beginPath();
-        context.moveTo(x + size / columns, y);
-        context.lineTo(x + size / columns, y + size / rows);
+        context.moveTo(x*(size / columns) + size / columns, y*( size / rows));
+        context.lineTo(x*(size / columns) + size / columns, y*( size / rows) + size / rows);
         context.stroke();
     }
 
     drawBottomWall(x, y, size, columns, rows) {
         context.beginPath();
-        context.moveTo(x, y + size / rows);
-        context.lineTo(x + size / columns, y + size / rows);
+        context.moveTo(x*(size / columns), y*( size / rows) + size / rows);
+        context.lineTo(x*(size / columns) + size / columns, y*( size / rows) + size / rows);
         context.stroke();
     }
 
     drawLeftWall(x, y, size, columns, rows) {
         context.beginPath();
-        context.moveTo(x , y);
-        context.lineTo(x , y + size / rows);
+        context.moveTo(x*(size / columns) , y*( size / rows));
+        context.lineTo(x*(size / columns) , y*( size / rows) + size / rows);
         context.stroke();
     }
 

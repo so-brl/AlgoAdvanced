@@ -26,7 +26,7 @@ $scriptName = 'dfs';
 </section>
 
 <?php
-$typeOfLabyrinthe = '3';
+$typeOfLabyrinthe = '20';
 $exerciseNumber ='0';
 $getLabyrintheData = getLabyrintheData($typeOfLabyrinthe, $exerciseNumber);
 $labyrinthe = updateLabyrintheData($getLabyrintheData,$typeOfLabyrinthe);
