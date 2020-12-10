@@ -1,14 +1,13 @@
 <?php
 
 
-function mazeNumber (){
+function maze (){
     $file = 'labyrinthes.json';
     // mettre le contenu du fichier dans une variable
     $data = file_get_contents($file);
     // décoder le flux JSON
     $obj = json_decode($data);
-    $mazeNumber = sizeof($obj);
-    return $mazeNumber;
+    return $obj;
 }
 
 function getLabyrintheData($number, $exercise)
@@ -32,8 +31,8 @@ function getLabyrintheData($number, $exercise)
 //    // stocker les datas reçu dans une variable
 //    $datas = $labyrinthe;
 //
-//    // création du nouveau tableau de data modifié
-//    $newDatas = [
+//
+//    $newDatas = [// création du nouveau tableau de data modifié
 //        "start" => 0,
 //        "finish" => $typeOfLabyrinthe * $typeOfLabyrinthe,
 //        "totalCells" => $typeOfLabyrinthe * $typeOfLabyrinthe,

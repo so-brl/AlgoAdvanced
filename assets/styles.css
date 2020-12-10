@@ -5,12 +5,80 @@ div{
     margin: 0;
     padding: 0;
 }
+.btn{
+    border-radius: 0;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem black;
+}
+
+.makeChoice{
+    color: #F24F13;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+}
+.infoMaze{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.btnMaze{
+    background-color: #4EA696;
+    color: white;
+    margin: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.btnMaze:hover{
+    background-color: #303E8C;
+    color: white;
+
+}
+.btnMaze:active{
+    background-color: #F24F13;
+    color: white;
+}
+.btnSelect{
+    background-color: #F24F13;
+    color: white;
+    margin: 5px;
+}
+
+.btnMaze:focus{
+    background-color: #F24F13;
+    color: white;
+    margin: 5px;
+}
+
+
+.generer{background-color: #F24F13;
+    color: white;
+  margin: auto;
+    padding: .75rem 1.5rem;
+}
+.generer:hover{
+    background-color: #303E8C;
+    color: white;
+
+}
+.generer:active{
+    background-color: #0E2226;
+    color: white;
+
+}
 .plateau{
     padding: 5vw;
+    margin: auto;
 }
+
 #labyrinthe{
      position: relative;
-
+    margin: auto;
  }
 
 .square{
