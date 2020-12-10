@@ -21,6 +21,7 @@ function getLabyrintheData($number, $exercise)
     // décoder le flux JSON
     $obj = json_decode($data);
 
+    //var_dump($obj->$number->$exo);
     // accéder à l'élément approprié
     return $obj->$number->$exo;
 }
