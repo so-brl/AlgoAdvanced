@@ -1,143 +1,165 @@
-body{
-background-color:black;
+body {
+    background-color: black;
 }
-div{
+
+div {
     margin: 0;
     padding: 0;
 }
-.btn{
+
+a {
+    /*text-transform: uppercase;*/
+    color: #F24F13;
+}
+a:hover{
+ text-decoration: none;
+    color: white;
+}
+
+.btn {
     border-radius: 0;
 }
+
 .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem black;
 }
 
-.makeChoice{
+.makeChoice {
     color: #F24F13;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.5rem;
     font-weight: bold;
 }
-.infoMaze{
+
+.infoMaze {
     color: white;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 2px;
     font-weight: bold;
 }
-.btnMaze{
+
+.btnMaze {
     background-color: #4EA696;
     color: white;
     margin: 5px;
     font-weight: bold;
     letter-spacing: 2px;
 }
-.btnMaze:hover{
+
+.btnMaze:hover {
     background-color: #303E8C;
     color: white;
 
 }
-.btnMaze:active{
+
+.btnMaze:active {
     background-color: #F24F13;
     color: white;
-}
-.btnSelect{
-    background-color: #F24F13;
-    color: white;
-    margin: 5px;
 }
 
-.btnMaze:focus{
+.btnSelect {
     background-color: #F24F13;
     color: white;
     margin: 5px;
 }
 
-
-.generer{background-color: #F24F13;
+.btnMaze:focus {
+    background-color: #F24F13;
     color: white;
-  margin: auto;
+    margin: 5px;
+}
+
+
+.generer {
+    background-color: #F24F13;
+    color: white;
+    margin: auto;
     padding: .75rem 1.5rem;
 }
-.generer:hover{
+
+.generer:hover {
     background-color: #303E8C;
     color: white;
-
 }
-.generer:active{
+
+.generer:active {
     background-color: #0E2226;
     color: white;
-
 }
-.plateau{
+
+.plateau {
     padding: 5vw;
     margin: auto;
 }
 
-#labyrinthe{
-     position: relative;
+#labyrinthe {
+    position: relative;
     margin: auto;
- }
+}
 
-.square{
+.square {
     margin: 0;
     padding: 0;
     position: absolute;
-    background-color: black;
-    height: 100px;
-    width: 100px;
     box-sizing: border-box;
+    font-size: 0.1vw;
+    color: black;
 }
 
-.start{
+.start {
     position: absolute;
     background-color: #303E8C;
-    height: 90px;
-    width: 90px;
-    margin: 5px;
+    margin: 0.1vw;
+    z-index: -1;
+
 }
-.finish{
+
+.finish {
     position: absolute;
-    background-color:#F24F13;
-    height: 90px;
-    width: 90px;
-    margin: 5px;
+    background-color: #F24F13;
+    z-index: -1;
+
 }
-.playerStyle{
+
+.playerStyle {
     position: absolute;
-    font-size: 30px;
-    margin:23px 38px ;
+    font-size: 0.1vw;
 }
-.active{
+
+.active {
     color: white;
 }
-.wall-top{
-    border-top : 5px solid #4EA696;
+
+.wall-top {
+    border-top: 0.1vw solid #4EA696;
 }
-.wall-left{
-    border-left : 5px solid #4EA696;
+
+.wall-left {
+    border-left: 0.1vw solid #4EA696;
 }
-.wall-bottom{
-    border-bottom : 5px solid #4EA696;
+
+.wall-bottom {
+    border-bottom: 0.1vw solid #4EA696;
 }
-.wall-right{
-    border-right : 5px solid #4EA696;
+
+.wall-right {
+    border-right: 0.1vw solid #4EA696;
 }
 
 
-#theGAme{
-   color: #4EA696;
+#theGAme {
+    color: #4EA696;
     font-size: 14px;
 }
 
-.visited{
-    color:#0E2226;
+.visited {
+    position: absolute;
+    z-index: -1;
+    color: #0E2226;
     background-color: #0E2226;
-    height: 90px;
-    width: 90px;
-    margin: 5px;
 }
 
 
