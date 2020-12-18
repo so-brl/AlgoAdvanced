@@ -3,7 +3,6 @@ Number.prototype.toRadians = function () {
     return this * Math.PI / 180;
 };
 
-
 // Calculates the distance between Grenoble and the given city
 function distanceFromGrenoble(city) {
     const GrenobleLat = 45.166667;
@@ -24,7 +23,6 @@ function distanceFromGrenoble(city) {
     return (R * c).toFixed(0); // in metres
 
 }
-
 
 // Swap 2 values in array csvData
 // i is the index of the first city
@@ -155,13 +153,12 @@ function heapify(csvData, length, i) {
     if (right < length && !isLess(right, higher)) {
         higher = right;
     }
-    if (higher !== i){
-        swap(i,higher);
-        heapify(csvData,length,higher);
+    if (higher !== i) {
+        swap(i, higher);
+        heapify(csvData, length, higher);
     }
 
 }
-
 
 function quicksort() {
     let begin = 0;
@@ -191,13 +188,93 @@ function partition(begin, end) {
     return k;
 }
 
-function quick3sort() {
+//
+// function quick3sort() {
+//
+//     //initialize all variables
+//    let reader = 0;
+//     let low = 0;
+//     let high = csvData.length - 1;
+//     let left = low;
+//     let right = high;
+//     let mid = (high-low)/2;
+//
+//     while(reader <= high){
+//         if(reader === left){
+//             /*When element at reader is 0, swap
+//             element at reader with element at index
+//             low and increment reader and low*/
+//             swap( reader, low);
+//             reader++;
+//             low++;
+//         }
+//         else if(reader === mid){
+//             /* if element at reader is just
+//             increment reader by 1 */
+//             reader++;
+//         }
+//         else if(reader === right){
+//             /* If element at reader is 2, swap
+//              element at reader with element at
+//              high and decrease high by 1 */
+//             swap(reader, high);
+//             high--;
+//         }
+//         // else{
+//         //     console.log("Bad input");
+//         //     break;
+//         // }
+//     }
+//
+// }
 
-    //faire l'opération en 3 fois come le trie de shell
 
-    console.log("quick3sort - implement me !");
+// function quick3sort() {
+// let start = 0;
+// let end = csvData.length-1;
+//
+//     quick3sortWhithParam(start, end);
+// }
+//
+// function quick3sortWhithParam(start, end) {
+//     if(start < end){
+//         if (start - end === 1){
+//             if (isLess(start,end)){
+//                 swap(start,end);
+//             }
+//             return;
+//     }
+//     }
+//    let pivotArray = partition3(start,end);
+//     console.log(pivotArray);
+//     quick3sortWhithParam(start,pivotArray[0]);
+//     quick3sortWhithParam(pivotArray[1], end);
+// }
+//
+// function partition3( start, end) {
+// let mid = start ;
+// let pivot = end;
+//     // console.log(pivot);
+//     // console.log(csvData[pivot]);
+// while ( mid <= end){
+//     if (isLess(mid,pivot)){
+//         console.log('ici');
+//         swap(start,mid);
+//         start= start+1;
+//         mid=mid+1;
+//     }
+//     else if (!isLess(mid,pivot)){
+//         console.log('la');
+//         swap(mid, end);
+//         end = end-1;
+//     }else {
+//         mid = mid+1;
+//         console.log('prout');
+//     }
+// }
+// return [start-1 , mid];
+// }
 
-}
 
 function sort(algo) {
     switch (algo) {
